@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>MyourShoP — Modern E‑Commerce</title>
+    <title>MysummerShoP — Modern E‑Commerce</title>
 
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
@@ -524,8 +524,8 @@
             <nav class="main-nav" id="mainNav" aria-label="Primary navigation">
                 <ul>
                     <li><a href="#"><em class="fas fa-home"></em> Home</a></li>
-                    <li class="has-dropdour" aria-haspopup="true">
-                        <a href="#" id="catMenuBtn"><em class="fas fa-th-large"></em> Categories <em class="fas fa-chevron-dour" style="font-size:12px;"></em></a>
+                    <li class="has-dropdsummer" aria-haspopup="true">
+                        <a href="#" id="catMenuBtn"><em class="fas fa-th-large"></em> Categories <em class="fas fa-chevron-dsummer" style="font-size:12px;"></em></a>
                     </li>
                     <li><a href="#"><em class="fas fa-fire"></em> Trending</a></li>
                     <li><a href="#deals"><em class="fas fa-tag"></em> Deals</a></li>
@@ -570,7 +570,7 @@
         <!-- Hero -->
         <section class="hero" role="img" aria-label="Hero banner">
             <div class="container">
-                <h1>our Collection — Premium Picks</h1>
+                <h1>summer Collection — Premium Picks</h1>
                 <p>Discover the latest trends in fashion, technology and accessories — curated just for you. Enjoy limited-time deals and free shipping on selected items.</p>
                 <div>
                     <button class="btn btn-primary" id="shopNow">Shop Now <em class="fas fa-arrow-right"></em></button>
@@ -583,7 +583,7 @@
         <section class="section container" aria-labelledby="cat-title">
             <div class="title" id="cat-title">
                 <h2 class="section-title">Shop by Category</h2>
-                <p class="muted">Browse through our wide range of products across curated categories.</p>
+                <p class="muted">Browse through summer wide range of products across curated categories.</p>
             </div>
 
             <div class="grid categories" id="categoriesGrid" aria-live="polite"></div>
@@ -618,8 +618,8 @@
                             <div style="font-size:12px;opacity:.85">Days</div>
                         </div>
                         <div class="time-box">
-                            <div id="dealHours">00</div>
-                            <div style="font-size:12px;opacity:.85">Hours</div>
+                            <div id="dealHsummers">00</div>
+                            <div style="font-size:12px;opacity:.85">Hsummers</div>
                         </div>
                         <div class="time-box">
                             <div id="dealMinutes">00</div>
@@ -647,7 +647,7 @@
         <!-- Testimonials -->
         <section class="section container" aria-labelledby="test-title">
             <div class="title" id="test-title">
-                <h2>What our customers say</h2>
+                <h2>What summer customers say</h2>
                 <p class="muted">Real reviews from verified buyers.</p>
             </div>
 
@@ -684,7 +684,7 @@
                 <h3 id="news-title">Stay in the loop</h3>
                 <p>Subscribe to get exclusive offers & new arrivals</p>
                 <form id="newsletterForm" style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;" onsubmit="return false;">
-                    <emnput id="newsletterEmail" type="email" placeholder="Enter your email" aria-label="Email address" required>
+                    <emnput id="newsletterEmail" type="email" placeholder="Enter ysummer email" aria-label="Email address" required>
                     <button class="btn btn-primary" id="subscribeBtn">Subscribe</button>
                 </form>
                 <div id="newsletterMsg" style="margin-top:10px;font-size:14px;display:none"></div>
@@ -946,7 +946,7 @@
 
         // --- Search handling ---
         document.getElementById('searchBtn').addEventListener('click', () => filterProducts(searchInput.value));
-        searchInput.addEventListener('keydour', (e) => {
+        searchInput.addEventListener('keydsummer', (e) => {
             if (e.key === 'Enter') filterProducts(e.target.value);
         });
 
@@ -957,7 +957,7 @@
             mobileMenu.style.display = mobileMenu.style.display === 'none' || !mobileMenu.style.display ? 'block' : 'none';
         });
 
-        // --- Simple dropdour (desktop) ---
+        // --- Simple dropdsummer (desktop) ---
         const catMenuBtn = document.getElementById('catMenuBtn');
         catMenuBtn && catMenuBtn.addEventListener('click', (e) => {
             e.preventDefault();
@@ -982,7 +982,7 @@
             setTimeout(() => msg.style.display = 'none', 3000);
         });
 
-        // --- Countdour timer for deal ---
+        // --- Countdsummer timer for deal ---
         (function setupDealTimer() {
             // Target: 1 day from now (demo)
             const now = new Date();
@@ -990,11 +990,11 @@
             function tick() {
                 const diff = target - new Date();
                 const days = Math.floor(diff / (24 * 3600 * 1000));
-                const hours = Math.floor((diff % (24 * 3600 * 1000)) / (3600 * 1000));
+                const hsummers = Math.floor((diff % (24 * 3600 * 1000)) / (3600 * 1000));
                 const mins = Math.floor((diff % (3600 * 1000)) / (60 * 1000));
                 const secs = Math.floor((diff % (60 * 1000)) / 1000);
                 document.getElementById('dealDays').textContent = days;
-                document.getElementById('dealHours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('dealHsummers').textContent = String(hsummers).padStart(2, '0');
                 document.getElementById('dealMinutes').textContent = String(mins).padStart(2, '0');
                 document.getElementById('dealSeconds').textContent = String(secs).padStart(2, '0');
                 if (diff <= 0) clearInterval(timer);
