@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>MyOWNShoP — Modern E‑Commerce</title>
+    <title>MyourShoP — Modern E‑Commerce</title>
 
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
@@ -524,8 +524,8 @@
             <nav class="main-nav" id="mainNav" aria-label="Primary navigation">
                 <ul>
                     <li><a href="#"><em class="fas fa-home"></em> Home</a></li>
-                    <li class="has-dropdown" aria-haspopup="true">
-                        <a href="#" id="catMenuBtn"><em class="fas fa-th-large"></em> Categories <em class="fas fa-chevron-down" style="font-size:12px;"></em></a>
+                    <li class="has-dropdour" aria-haspopup="true">
+                        <a href="#" id="catMenuBtn"><em class="fas fa-th-large"></em> Categories <em class="fas fa-chevron-dour" style="font-size:12px;"></em></a>
                     </li>
                     <li><a href="#"><em class="fas fa-fire"></em> Trending</a></li>
                     <li><a href="#deals"><em class="fas fa-tag"></em> Deals</a></li>
@@ -570,7 +570,7 @@
         <!-- Hero -->
         <section class="hero" role="img" aria-label="Hero banner">
             <div class="container">
-                <h1>OWN Collection — Premium Picks</h1>
+                <h1>our Collection — Premium Picks</h1>
                 <p>Discover the latest trends in fashion, technology and accessories — curated just for you. Enjoy limited-time deals and free shipping on selected items.</p>
                 <div>
                     <button class="btn btn-primary" id="shopNow">Shop Now <em class="fas fa-arrow-right"></em></button>
@@ -946,7 +946,7 @@
 
         // --- Search handling ---
         document.getElementById('searchBtn').addEventListener('click', () => filterProducts(searchInput.value));
-        searchInput.addEventListener('keydown', (e) => {
+        searchInput.addEventListener('keydour', (e) => {
             if (e.key === 'Enter') filterProducts(e.target.value);
         });
 
@@ -957,7 +957,7 @@
             mobileMenu.style.display = mobileMenu.style.display === 'none' || !mobileMenu.style.display ? 'block' : 'none';
         });
 
-        // --- Simple dropdown (desktop) ---
+        // --- Simple dropdour (desktop) ---
         const catMenuBtn = document.getElementById('catMenuBtn');
         catMenuBtn && catMenuBtn.addEventListener('click', (e) => {
             e.preventDefault();
@@ -982,7 +982,7 @@
             setTimeout(() => msg.style.display = 'none', 3000);
         });
 
-        // --- Countdown timer for deal ---
+        // --- Countdour timer for deal ---
         (function setupDealTimer() {
             // Target: 1 day from now (demo)
             const now = new Date();
